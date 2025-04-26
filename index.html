@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>EzNotes</title>
+</head>
+<body>
+    <header><h1>EzNotes</h1></header>
+    <main>
+
+        
+        
+
+        <!-- <div id="space"></div> -->
+        
+        <div id="tools">
+            <ul>
+                <li id="h1" onmousedown="setH1()">h1</li>
+                <li id="h2" onmousedown="setH2()">h2</li>
+                <li id="h3" onmousedown="setH3()">h3</li>
+                <li id="bold" onmousedown="setBold()"><b>a</b></li>
+                <li id="italic" onmousedown="setItalic()"><em>a</em></li>
+            </ul>
+        </div>
+
+        <div id="pannelExport">
+            <ul>
+                <li class="select-format"><button>Text</button></li>
+                <li><button>Markdown</button></li>
+            </ul>
+
+            <button onclick="fnExport()" id="download"><i class="fa fa-download" aria-hidden="true"></i></button>
+        </div>
+
+        <nav id="nav">
+            <ul>
+                <!-- fa fa-minus -->
+                <li onclick="fnTools()"><button id="btnTools" class="fa fa-plus" aria-hidden="true"></button></li>
+                <li>
+                    <label for="importer" class="fa fa-upload"></label>
+                    <input type="file" name="importer" id="importer" accept=".txt, .md"> 
+                </li> 
+                <li onclick="fnPannelExport()"><button id="exporter" class="fa fa-download" aria-hidden="true"></button></li>
+                <li onclick="fnClear()"><button id="clear" class="fa fa-trash" aria-hidden="true"></button></li>
+                <li onclick="changeTheme()"><button class="fa fa-sun-o" aria-hidden="true" id="btnTheme"></button></li>
+        
+            
+            
+            </ul>
+
+
+            
+        </nav>
+
+        
+
+        
+
+        <section>
+            <div id="title"><h2 contenteditable="true" spellcheck="true"><input type="text" id="titleEntry" value="Titre" autocomplete="off"></h2></div>
+            <div id="content" contenteditable="true" spellcheck="true">
+                <p>Votre application de prise de notes simple et efficace.</p>
+            </div>
+        </section>
+        
+        
+      
+    </main>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
